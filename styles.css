@@ -10,6 +10,12 @@ section .fent {
     width: 100%;
 }
 
+.fent{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -196,7 +202,7 @@ footer .news input, footer .news button{
     header nav ul li {
         padding: .5rem;
         text-align: center;
-        
+    }
     footer{
         display: flex;
         flex-direction: column;
