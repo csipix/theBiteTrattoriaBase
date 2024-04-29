@@ -6,6 +6,10 @@
     font-style: normal;
 }
 
+section .fent {
+    width: 100%;
+}
+
 header {
     display: flex;
     flex-direction: row;
@@ -13,6 +17,7 @@ header {
     align-items: center;
     background: black;
     height: 10rem;
+    width: 100%;
 }
 
 header nav{
@@ -159,4 +164,57 @@ footer .news h4{
 
 footer .news input, footer .news button{
     border-radius: 3px;
+}
+
+@media (max-width: 1024px){
+    .fent{
+        position: static;
+    }
+    header figure a img{
+        display: block;
+        margin: auto;
+    }
+    header{
+        display: block;
+        width: auto;
+        height: auto;
+    }
+    nav .menu{
+        margin-bottom: 2rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    header nav{
+        font-size: 100%;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        letter-spacing: 0.13rem;
+        margin-right: 0rem;
+        margin-top: 1rem;
+    }
+    header nav ul li {
+        padding: .5rem;
+        text-align: center;
+    }
+    .content h1{
+        font-size: 250%;
+    }
+    .content h2{
+        font-size: 0ch;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    footer .news{
+        padding-bottom: 5rem;
+        padding-top: 2rem;
+    }
+    footer .social{
+        padding-bottom: 2rem;
+    }
 }
