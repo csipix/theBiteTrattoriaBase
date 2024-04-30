@@ -9,7 +9,6 @@
 section .fent {
     width: 100%;
 }
-
 .fent{
     position: fixed;
     width: 100%;
@@ -21,11 +20,30 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: black;
+    background: transparent;
     height: 10rem;
     width: 100%;
+    transition: all 0.8s;
 }
 
+.header-scrolled{
+    background: rgba(0,0,0, 70%) 
+    
+}
+
+/* .header-scrolled-back{
+    animation: fadeOut 1s;
+    
+} */
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes fadeOut {
+  0% { background: rgba(0,0,0, 70%) }
+  100% { background: rgba(0,0,0, 0%) }
+}
 header nav{
     display: flex;
     justify-content: space-between;
@@ -56,6 +74,7 @@ header figure img {
     width: 12rem;
     display: flex;
     justify-content: space-around;
+
     
 }
 
@@ -157,7 +176,7 @@ i{
     text-align: center;
 }
 footer .social ul li a{
-    color: rgb(187, 146, 12);
+    color: rgb(255, 255, 255);
 }
 
 footer .social ul li a:hover{
@@ -171,6 +190,31 @@ footer .news h4{
 footer .news input, footer .news button{
     border-radius: 3px;
 }
+/* body */
+
+.sec{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+section .background-img {
+    width: 100%;
+    overflow: hidden;
+    
+}
+section .background-img .img{
+    width: 100%;
+    filter: brightness(0.4);
+    animation: fadeIn 0s;
+
+}
+
+
+
 
 @media (max-width: 1024px){
     .fent{
@@ -184,6 +228,15 @@ footer .news input, footer .news button{
         display: block;
         width: auto;
         height: auto;
+        background: black;
+    }
+    header figure {
+        justify-content: center;
+    }
+
+    .header-scrolled{
+        background: rgba(0,0,0, 100%) 
+        
     }
     nav .menu{
         margin-bottom: 2rem;
@@ -194,7 +247,6 @@ footer .news input, footer .news button{
     }
     header nav{
         font-size: 100%;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         letter-spacing: 0.13rem;
         margin-right: 0rem;
         margin-top: 1rem;
@@ -216,4 +268,5 @@ footer .news input, footer .news button{
     footer .social{
         padding-bottom: 2rem;
     }
+    
 }
